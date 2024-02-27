@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-  
+    
  img{
     max-width: 100%;
     width: 100%;
@@ -26,8 +25,6 @@
     justify-content: center !important;
     align-items: center;
     margin: auto;
-
-
   }
 
   .header{
@@ -44,7 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1rem;
     transform: translateY(0%)
   }
 
@@ -55,6 +52,10 @@
 
   .header nav ul li{
     margin: 0;
+  }
+
+  .header .menu{
+    display: none;
   }
 
   .container {
@@ -185,4 +186,26 @@
     width: 75%;
   }
 
+
+ @media (min-width: 375px) and (max-width: 768px){
+    .header nav{
+        display: none;
+    }
+    .container{
+        display: grid;
+        grid-template-columns:repeat(1, 3fr);
+    }
+    .container article{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .categories{
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        gap: 1.25rem;
+    }
+}
+
+    
   
