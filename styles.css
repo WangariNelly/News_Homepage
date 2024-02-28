@@ -76,7 +76,7 @@
     font-size: 40px;
     font-weight: 800;
     color: hsl(240, 100%, 5%);
-    margin: 1rem 1rem;
+    margin: 1.5rem 1rem 1rem 0;
   
   }
 
@@ -187,9 +187,13 @@
   }
 
 
- @media (min-width: 375px) and (max-width: 768px){
+ @media screen and (max-width: 768px){
     .header nav{
-        display: none;
+      display: none;
+    }
+    .header .menu{
+       display: block;
+       cursor: pointer;
     }
     .container{
         display: grid;
