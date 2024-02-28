@@ -38,7 +38,7 @@
   .header nav ul{
     position: relative;
     top: 0;
-    display: flex;
+    /*display: flex;*/
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -55,6 +55,10 @@
   }
 
   .header .menu{
+    display: none;
+  }
+
+  header nav .close button{
     display: none;
   }
 
@@ -182,19 +186,47 @@
     color: hsl(236, 13%, 42%);
   }
 
-  .categories .img{
+  .categories img{
     width: 75%;
   }
 
 
  @media screen and (max-width: 768px){
-    .header nav{
-      display: none;
+
+    .header nav.open{
+     position: fixed;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     width: 75vw;
+     background-color: hsl(36, 100%, 99%)
+    }
+
+    .header nav.open ul{ 
+      margin: 10rem 1rem 0 1rem ;
+      padding: 10px;
+    }
+    .header nav.open ul li{
+      line-height: 2.5rem;
+      font-size: 18px;
+      font-weight: 700px;
+    }
+
+    header nav .close button{
+         border: none;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 20px;
+         margin-left: 250px;
+         background-color: white;
+         
     }
     .header .menu{
        display: block;
        cursor: pointer;
     }
+
     .container{
         display: grid;
         grid-template-columns:repeat(1, 3fr);
@@ -212,4 +244,5 @@
 }
 
     
-  
+  /*remove flex on desktop design for the nav ul lis
+  then style the small screens .open class*/
